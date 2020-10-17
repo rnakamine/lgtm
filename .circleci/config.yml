@@ -12,7 +12,7 @@ jobs:
             pip install --user -r requirements.lock
       - save_cache:
           key: deps-{{ checksum "requirements.lock" }}
-          path:
+          paths:
             - "~/.local"
 
   test:
